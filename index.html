@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>JS to master on Anonymous fucntions and builtin fucntions</title>
+        <!-- HTML5 shim for IE8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src=“https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js”></script>
+    <![endif]-->
+</head>
+<body onload="myfunc()">
+<!-- Header -->
+<header>
+<h1> Assignment 7.3 </h1>
+</header>
+<div id="result"></div>
+
+<script type="text/javascript">
+//function declaration
+var aFunc=function(fName,lName){ 
+document.getElementById("result").innerHTML +="<br> The first Name is "+fName+"<br>";
+document.getElementById("result").innerHTML +=" The Last Name is "+lName;+"<br>";
+}
+//fucntion to delay the response using the setInterval
+function myfunc(){
+var timer=6;
+var showTimer=setInterval(function(){
+timer--;
+document.getElementById("result").textContent=timer;
+if(timer <=1)
+{
+clearInterval(showTimer);
+}},1000);
+var res=setTimeout(aFunc,5000,"Srinivas","Raghavan");
+}
+</script>
+</body>
+</html>
